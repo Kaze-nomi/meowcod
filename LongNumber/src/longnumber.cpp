@@ -242,7 +242,7 @@ namespace LN {
     std::vector<int> res((int)digits.size() + (int)val.digits.size(), 0);
 
     int over = 0;
-    for (int i = 0; i < (int)digits.size(); ++i) {
+    for (int i = 0; i < (int)digits.size(); i++) {
       int idx = 0;
 
       while (idx < (int)val.digits.size() || over != 0) {
@@ -290,7 +290,7 @@ namespace LN {
     std::vector<int> res;
 
     digits.push_back(0);
-    for (int i = (int)digits.size() - 2; i >= (int)val.digits.size() - 1; --i) {
+    for (int i = (int)digits.size() - 2; i >= (int)val.digits.size() - 1; i--) {
       int l = 0, r = base;
 
       while (r - l > 1) {
@@ -356,7 +356,7 @@ namespace LN {
 
     digits = res;
 
-    for (int i = 0; i < (int)digits.size() / 2; ++i) {
+    for (int i = 0; i < (int)digits.size() / 2; i++) {
       std::swap(digits[i], digits[(int)digits.size() - 1 - i]);
     }
 
@@ -428,7 +428,7 @@ namespace LN {
     }
 
     bool flag = true;
-    for (int i = (int)val1.digits.size() - 1; i >= 0; --i) {
+    for (int i = (int)val1.digits.size() - 1; i >= 0; i--) {
         if (val1.digits[i] != val2.digits[i]) {
         flag = false;
         break;
@@ -472,7 +472,7 @@ namespace LN {
     }
 
     int flag = 0;
-    for (int i = (int)val1.digits.size() - 1; i >= 0; --i) {
+    for (int i = (int)val1.digits.size() - 1; i >= 0; i--) {
         if (val1.digits[i] < val2.digits[i]) {
         flag = 1;
         break;
