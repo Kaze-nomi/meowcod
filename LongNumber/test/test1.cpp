@@ -24,6 +24,12 @@ TEST(LongNumber, Arithmetic) {
   EXPECT_EQ(a, 0.1249999_LN);
 }
 
+TEST(LongNumber, String) {
+  // Expect string equality.
+  LongNumber a = 3.14_LN;
+  std::string b = a.toString();
+  EXPECT_EQ(b, "3.14");
+}
 
 TEST(LongNumber, Computation) {
   // Solve equation x^2 = 2 (positive root)
