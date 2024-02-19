@@ -1,5 +1,5 @@
 #include <longnumber.hpp>
-
+#include <time.h>
 
 using namespace LN;
 
@@ -31,12 +31,17 @@ void getPi(int digits) {
 }
 
 int main() {
-  std::cout << "Enter the precision of pi" << std::endl;
+  std::cout << "Enter the precision of pi:" << std::endl;
 
   int digits;
-  std::cin >> digits; 
+  std::cin >> digits;
 
+  double time = 0.0;
+
+  time = clock ();
   getPi(digits);
+  time = (clock() - time) / CLOCKS_PER_SEC;
+  std::cout << "Time passed: " << time << std::endl;
 
   return 0;
 }

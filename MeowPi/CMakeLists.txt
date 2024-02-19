@@ -1,4 +1,4 @@
-project(piProj)
+project(MeowPi)
 
 include_projects_directories(LongNumber)
 

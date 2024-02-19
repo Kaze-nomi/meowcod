@@ -1,12 +1,21 @@
 cmake_minimum_required (VERSION 3.8)
-project ("TMP")
+project ("Meow")
 
 set (CMAKE_CXX_STANDARD 20)
+
+set (CMAKE_CXX_FLAGS "-O0")
+
+# set compiler flags
+
+# find required tools
+find_program(LCOV lcov REQUIRED)
+find_program(GENHTML genhtml REQUIRED)
 
 include(cmake/Core.cmake)
 
 add_subdirectory("LongNumber")
-add_subdirectory("piProj")
+add_subdirectory("MeowPi")
+
 
 
 # Google tests

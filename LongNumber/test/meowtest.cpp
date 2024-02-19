@@ -12,6 +12,7 @@ TEST(LongNumber, CompareTest) {
   EXPECT_EQ(0.1_LN  != -0.1_LN, true);
 }
 
+
 TEST(LongNumber, Arithmetic) {
   // Expect equality.
   EXPECT_EQ(1._LN + 0.1_LN, 0.11e1_LNE);
@@ -29,6 +30,12 @@ TEST(LongNumber, String) {
   LongNumber a = 3.14_LN;
   std::string b = a.toString();
   EXPECT_EQ(b, "3.14");
+}
+
+TEST(LongNumber, DivisionByZero) {
+  // Expect string equality.
+  LongNumber a = 3.14_LN;
+  EXPECT_DEATH(a /= 0, "");
 }
 
 TEST(LongNumber, Computation) {
